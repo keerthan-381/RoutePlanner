@@ -149,14 +149,14 @@ def main():
     graph = Graph()
 
     # Load edge weights from file
-    with open(r"C:\Users\keerthan\Downloads\Local-Bus-Route-Planner\EdgeWeightTEMP.txt", "r") as edge_weights_file:
+    with open(r"EdgeWeightTEMP.txt", "r") as edge_weights_file:
         for line in edge_weights_file:
             data = line.strip().split()
             if data:
                 graph.AddEdge(data[0], data[1], float(data[2]))
 
     # Load bus information from file
-    with open(r"C:\Users\keerthan\Downloads\Local-Bus-Route-Planner\BUSTEMP.TXT", "r") as bus_file:
+    with open(r"BUSTEMP.TXT", "r") as bus_file:
         for line in bus_file:
             data = line.strip().split()
             bus_type = data.pop(0)
